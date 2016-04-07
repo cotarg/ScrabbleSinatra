@@ -10,5 +10,9 @@ class MyApp < Sinatra::Base
 		erb :score
 	end
 
+	get '/score_many' do
+		erb :score_many
+	end
+
 	run!
 end
