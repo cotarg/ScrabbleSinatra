@@ -1,0 +1,16 @@
+/********** GLOBAL *********/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font: 16px Helvetica, sans-serif;
+	background-color: #9A9A9A;
+}
+
+nav {
+	border: 5px double #000;
+	border-radius: 15%;
+	width: 40%;
+}

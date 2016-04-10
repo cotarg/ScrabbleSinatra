@@ -1,18 +1,19 @@
 
+<section class="scored-words">
+	<% if @word_to_score %>
+		<p>The word you checked was: <%= @word_to_score %>.</p>
+		<p>The score for this word is: <%= @word_score %> points.</p>
+	<% end %>
+</section>
 
-<% if @word_to_score %>
-	<p>The word you checked was: <%= @word_to_score %>.</p>
-	<p>The score for this word is: <%= @word_score %> points.</p>
-<% end %>
+<section class="form">
+	<p class="description">This form will allow you to find the completely unofficial Scrabble&trade; score for a single word. If you type more than one word it will only give you the score for the first one. 15 character maximum.</p>
 
-
-<p>This form will allow you to find the score for a single word. If you type more than one word I will only give you the score for the first one. </p>
-
-<form action="" method="post" accept-charset="utf-8">
-	<fieldset>
-	  <label for="word-score">Word to Score:</label>
-		<input type="text" name="word-score[]" value="" id="word-score" maxlength="20">
-		<input type="submit" value="Submit">
-	</fieldset>
-</form>
-
+	<form action="" method="post" accept-charset="utf-8">
+		<fieldset>
+		  <label for="word-score">Word to Score:</label>
+			<input type="text" name="word-score[]" value="" id="word-score" maxlength="15">
+			<input type="submit" value="Submit">
+		</fieldset>
+	</form>
+</section>
