@@ -1,19 +1,12 @@
-<p>This form will allow you to find the score for a single word. If you enter more than one word in the box below, I will only score the first one entered.</p>
+<p>This form will allow you to find the score for multiple words. Please separate each word with a space.</p>
 
-<!-- The form will go here. -->
-<%= params %>
+<% if @words_to_score %>
+	<% @words_to_score.length.times do |i| %>
+		<p><%= @words_to_score[i].capitalize %> scores <%= @word_scores[i] %> points.</p>
+	<% end %>
+	<%end%>
 
 <form action="" method="post" accept-charset="utf-8">
   <label for="word-score">Word to Score</label>
-  <input type="text" name="word-score" value="" id="word-score">
+  <input type="text" name="word-score[]" value="" id="word-score">
 </form>
-
-<!-- What this needs to do. -->
-
-<!-- 1. Get the list of submitted words and split it.
-
-2. Validate each word. Kick out any non-letter entries.
-
-3. Score words.
-
-4. Return score. -->
