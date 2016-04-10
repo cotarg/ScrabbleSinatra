@@ -2,12 +2,13 @@
 
 <!-- The form will go here. -->
 
-<%= @score_word.score_word %>
+<%= @score_word %>
+<%= @word_score %>
 
 <form action="" method="post" accept-charset="utf-8">
 	<fieldset>
 	  <label for="word-score">Words to Score</label>
-		<input type="text" name="word-score" value="" id="word-score">
+		<input type="text" name="word-score[]" value="" id="word-score">
 	</fieldset>
 </form>
 

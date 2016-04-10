@@ -1,7 +1,7 @@
 require 'sinatra'
-require_relative 'lib/scrabble'
-require_relative 'lib/scoring'
-require_relative 'lib/word'
+require_relative './lib/scrabble'
+require_relative './lib/scoring'
+require_relative './lib/word'
 
 class MyApp < Sinatra::Base
 
@@ -14,7 +14,8 @@ class MyApp < Sinatra::Base
 	end
 
   post '/score' do
-    @score_word = Scrabble::Word.new(params["score-word"[1]])
+    @score_word = params["word-score"].first
+    @word_score = Scrabble::Scoring.score(@score_word)
     erb :score
   end
 

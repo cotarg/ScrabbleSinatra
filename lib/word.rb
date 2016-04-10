@@ -1,10 +1,10 @@
-# require_relative 'lib/scrabble'
+require_relative './scrabble'
 
 class Scrabble::Word
-	attr_reader :score_word
+	attr_accessor :word_to_score
 
 	def initialize(words)
-		@score_word = words
+		@word_to_score = words
 	end
 
 end
