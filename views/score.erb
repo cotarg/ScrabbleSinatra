@@ -1,12 +1,15 @@
 
-<section class="scored-words">
-	<% if @word_to_score %>
-		<p>The word you checked was: <%= @word_to_score %>.</p>
-		<p>The score for this word is: <%= @word_score %> points.</p>
-	<% end %>
-</section>
 
-<section class="form">
+
+<section class="main-content">
+
+	<section class="scored-words">
+		<% if @word_to_score %>
+			<p>The word you checked was: <%= @word_to_score %>.</p>
+			<p>The score for this word is: <%= @word_score %> points.</p>
+		<% end %>
+	</section>
+
 	<p class="description">This form will allow you to find the completely unofficial Scrabble&trade; score for a single word. If you type more than one word it will only give you the score for the first one. 15 character maximum.</p>
 
 	<form action="" method="post" accept-charset="utf-8">

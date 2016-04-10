@@ -1,14 +1,16 @@
 
-<section class="scored-words">
-	<% if @words_to_score %>
-		<% @words_to_score.length.times do |i| %>
-			<p><%= @words_to_score[i].capitalize %> scores <%= @word_scores[i] %> points.</p>
+
+
+
+<section class="main-content">
+
+	<section class="scored-words">
+		<% if @words_to_score %>
+			<% @words_to_score.length.times do |i| %>
+				<p><%= @words_to_score[i].capitalize %> scores <%= @word_scores[i] %> points.</p>
+			<% end %>
 		<% end %>
-	<% end %>
-</section>
-
-
-<section class="form">
+	</section>
 
 	<p class="description">This form will allow you to find the completely unofficial Scrabble&trade; score for multiple words. Please separate each word with a space. 40 character maximum.</p>
 
