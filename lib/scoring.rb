@@ -20,6 +20,10 @@ class Scrabble::Scoring # declare this as Scrabble::Scoring during cleanup.
 		return highest_score
 	end
 
+	def self.score_many(array_of_words)
+		array_of_words.collect { |word| self.score(word)}
+	end
+
 	private # hiding the mess even from ourselves!!
 
 	def self.scoring_math(word)
