@@ -9,8 +9,51 @@ body {
 	background-color: #9A9A9A;
 }
 
+
+/********** HEADER **********/
+
 nav {
-	border: 5px double #000;
-	border-radius: 15%;
-	width: 40%;
+	border: 2px solid #000;
+	border-radius: 80rem;
+	width: 45%;
+	height: 15rem;
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/images/scrabble-letters.jpg");
+	text-align: center;
+	margin: 0 auto;
+}
+
+nav > h1 {
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+	font-weight: lighter;
+	text-align: center;
+	width: 80%;	
+	margin: 1rem auto;
+	border-radius: 80rem;
+}
+
+nav > ul {
+	padding-right: 1rem;
+	list-style-type: none;
+	margin: 2rem auto;
+}
+
+nav li {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+	padding-top: .2rem;
+	padding-bottom: .2rem;
+	font-weight: bold;
+	background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+	border-radius: 80rem;
+	width: 90%;
+}
+
+/********** FOOTER **********/
+
+.disclaimer {
+	border: 1px solid gray;
+	background-color: #AFAFAF;
+	width: 80%;
+	margin: 0 auto;
 }
