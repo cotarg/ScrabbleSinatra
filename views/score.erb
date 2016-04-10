@@ -1,12 +1,12 @@
 
 
-<% if @score_word %>
-	<p>The word you checked was: <%= @score_word %>.</p>
+<% if @word_to_score %>
+	<p>The word you checked was: <%= @word_to_score %>.</p>
 	<p>The score for this word is: <%= @word_score %> points.</p>
 <% end %>
 
 
-<p>This form will allow you to find the score for a word.</p>
+<p>This form will allow you to find the score for a single word. If you type more than one word I will only give you the score for the first one. </p>
 
 <form action="" method="post" accept-charset="utf-8">
 	<fieldset>
