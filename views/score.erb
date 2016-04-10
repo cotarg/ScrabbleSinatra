@@ -1,23 +1,17 @@
-<p>This form will allow you to find the score for a multiple words. Please separate each word with a comma.</p>
 
-<!-- The form will go here. -->
 
-<%= @score_word %>
-<%= @word_score %>
+<% if @score_word %>
+	<p>The word you checked was: <%= @score_word %>.</p>
+	<p>The score for this word is: <%= @word_score %> points.</p>
+<% end %>
+
+
+<p>This form will allow you to find the score for a word.</p>
 
 <form action="" method="post" accept-charset="utf-8">
 	<fieldset>
-	  <label for="word-score">Words to Score</label>
+	  <label for="word-score">Word to Score:</label>
 		<input type="text" name="word-score[]" value="" id="word-score">
 	</fieldset>
 </form>
 
-<!-- So. What this needs to do. -->
-
-<!-- 1. Make sure the submitted string is split at the spaces.
-
-2. Validate only the first entered word.
-
-3. Score the word.
-
-4. Return the score. -->

@@ -14,7 +14,8 @@ class MyApp < Sinatra::Base
 	end
 
   post '/score' do
-    @score_word = params["word-score"].first
+    @score_word = params["word-score"].first.split(' ')
+    @score_word = @score_word.first
     @word_score = Scrabble::Scoring.score(@score_word)
     erb :score
   end
