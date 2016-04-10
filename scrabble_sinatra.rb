@@ -14,18 +14,28 @@ class MyApp < Sinatra::Base
 	end
 
   post '/score' do
-    @score_word = params["word-score"].first.split(' ')
-    @score_word = @score_word.first
-    @word_score = Scrabble::Scoring.score(@score_word)
+    @word_to_score = params["word-score"].first.split(' ')
+    @word_to_score = @word_to_score.first
+    @word_score = Scrabble::Scoring.score(@word_to_score)
     erb :score
   end
 
-	get '/score_many' do
+	get '/score-many' do
 		erb :score_many
 	end
 
-	post '/score_many' do
+	post '/score-many' do
+		@words_to_score = params["word-score"].first.split(' ')
+		@word_scores = Scrabble::Scoring.score_many(@words_to_score)
+		
 		erb :score_many
+	end
+
+	get '/:word' do
+		@word_to_score = params[:word]
+		@word_score = Scrabble::Scoring.score(@word_to_score)
+
+		erb :score
 	end
 
 	run!
